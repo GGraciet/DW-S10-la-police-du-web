@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactMessage;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -27,6 +28,8 @@ class ContactController extends Controller
             'email' => 'required|email:rfc,dns|max:255',
             'message' => 'required|string|min:10|max:1000'
         ]);
+
+        ContactMessage::create($validated);
 
         return view('contact.confirmation', [
             'name' => $validated['name']

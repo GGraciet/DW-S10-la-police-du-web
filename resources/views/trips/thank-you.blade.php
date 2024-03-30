@@ -11,4 +11,6 @@
     @else
         <p>As you are an adult, no further administraive step is required.</p>
     @endif
+
+    <a href={{ route('reservations.index') }}>See all reservations</a>
 @endsection
