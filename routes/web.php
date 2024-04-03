@@ -21,6 +21,6 @@ Route::get('/countries', [CountryController::class, 'index'])->name('countries.i
 Route::get('/countries/create', [CountryController::class, 'create'])->name('countries.create');
 Route::post('/countries', [CountryController::class, 'store'])->name('countries.store');
 Route::get('/countries/{id}', [CountryController::class, 'show'])->name('countries.show');
-Route::get('/countries/edit/{id}', [CountryController::class, 'edit'])->name('countries.edit');
+Route::get('/countries/{id}/edit', [CountryController::class, 'edit'])->name('countries.edit');
 Route::put('/countries/{id}', [CountryController::class, 'update'])->name('countries.update');
 Route::delete('/countries/{id}', [CountryController::class, 'destroy'])->name('countries.destroy');
